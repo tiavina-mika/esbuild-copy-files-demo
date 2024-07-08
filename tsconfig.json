@@ -16,12 +16,12 @@
     "module": "ESNext",
     "noEmit": true,
     /* If your code doesn't run in the DOM: */
-    "lib": ["es2022"],
+    "lib": ["es2022", "dom"],
     "outDir": "./dist",
     "paths": {
       "@/*": ["./src/*"]
     },
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "src/dist", "*.config.js", "dev/**/*.js"]
+  "exclude": ["node_modules", "build.config.js", "build.watch.config.js"]
 }
