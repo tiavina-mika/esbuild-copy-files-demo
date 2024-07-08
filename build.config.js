@@ -1,23 +1,7 @@
 const esbuild = require('esbuild');
 const path = require('path');
-const fs = require('fs-extra');
 const { nodeExternalsPlugin } = require("esbuild-node-externals");
-
-const esbuildCopyTypesPlugin = () => ({
-  name: 'esbuild-copy-plugin',
-  setup(build) {
-      build.onEnd(async () => {
-        try {
-          const currentRoot = process.cwd();
-          const typesPath = path.resolve(currentRoot, './src/types.d.ts');
-          const destPath = path.resolve(currentRoot, './dist/index.d.ts');
-          await fs.copy(typesPath, destPath);
-        } catch (e) {
-            console.error('Failed to copy file:', e);
-        }
-      });
-  },
-});
+// const copy = require("esbuild-copy-files");
 
 const buildOptions = {
   entryPoints: [
@@ -29,7 +13,21 @@ const buildOptions = {
   outdir: 'dist',
   plugins: [
     nodeExternalsPlugin(),
-    esbuildCopyTypesPlugin()
+    // copy({
+    //   assets: [
+    //     {
+    //       from: ['./src/folder1/subfolder1'],
+    //       to: ['./dist/folder1/subfolder1'],
+    //       ignoreFiles: ['*1.json'],
+    //       watch: true,
+    //     },
+    //     {
+    //       from: ['./src/folder2/subfolder2'],
+    //       to: ['./dist/folder1/subfolder2'],
+    //       watch: false,
+    //     },
+    //   ]
+    // })
   ],
 };
 
