@@ -32,10 +32,11 @@
     "watch:server": "node ./build.watch.config.js",
     "watch:restart-server": "nodemon --config nodemon.json",
     "dev": "npx concurrently \"yarn watch:server\" \"yarn watch:restart-server\"",
-    "build": "node ./build.config.js"
+    "build": "node ./build.config.js",
+    "upgrade": "yarn add esbuild-copy-files@latest"
   },
   "dependencies": {
-    "esbuild-copy-files": "^0.1.5"
+    "esbuild-copy-files": "^0.1.8"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
