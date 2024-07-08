@@ -1,1 +1,1 @@
-# esbuild-copy-files-demo
+# blogko-server
