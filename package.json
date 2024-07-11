@@ -36,7 +36,7 @@
     "upgrade": "yarn add esbuild-copy-files@latest"
   },
   "dependencies": {
-    "esbuild-copy-files": "^0.2.1"
+    "esbuild-copy-files": "^0.2.11"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
