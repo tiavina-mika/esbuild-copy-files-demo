@@ -2,6 +2,7 @@ const esbuild = require('esbuild');
 const path = require('path');
 const { nodeExternalsPlugin } = require("esbuild-node-externals");
 const { copy } = require("esbuild-copy-files");
+const { watch } = require('fs');
 
 const buildOptions = {
   entryPoints: [
@@ -14,11 +15,12 @@ const buildOptions = {
   plugins: [
     nodeExternalsPlugin(),
     copy({
+      watch: true,
       patterns: [
         {
-          from: ['./src/folder1/subfolder1'],
-          to: ['./dist/folder1/subfolder1'],
-          filter: ['*1.json'],
+          from: ['./src/folder2'],
+          to: ['./dist/folder2'],
+          ignore: ['*3.json'],
           watch: true,
         },
         // {
