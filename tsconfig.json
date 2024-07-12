@@ -23,5 +23,5 @@
     },
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build.config.js", "build.watch.config.js"]
+  "exclude": ["node_modules", "build.config.js", "config/esbuild/build.watch.config.js"]
 }
