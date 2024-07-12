@@ -532,7 +532,7 @@ __metadata:
   dependencies:
     concurrently: "npm:^8.2.2"
     esbuild: "npm:^0.23.0"
-    esbuild-copy-files: "npm:^0.2.12"
+    esbuild-copy-files: "npm:^0.2.14"
     esbuild-node-externals: "npm:^1.13.1"
     fs-extra: "npm:^11.1.1"
     nodemon: "npm:^3.1.4"
@@ -541,16 +541,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"esbuild-copy-files@npm:^0.2.12":
-  version: 0.2.12
-  resolution: "esbuild-copy-files@npm:0.2.12"
+"esbuild-copy-files@npm:^0.2.14":
+  version: 0.2.14
+  resolution: "esbuild-copy-files@npm:0.2.14"
   dependencies:
     anymatch: "npm:^3.1.3"
     chokidar: "npm:^3.6.0"
     fs-extra: "npm:^11.2.0"
   peerDependencies:
     esbuild: ">= 0.14.0"
-  checksum: 10c0/57c8f251a048496bd20a2e04fe76f23b87f600f37da37f7fd243f29ec273c27ccc985c41d04401cff4fabba3906a07b6df160075933d802de39ecb3b4795f0f7
+  checksum: 10c0/a0e63499709be915c0a14874d976178052584c93cd85dc4fc79ce0c7b6dab7c5e94dfaf1fdb59bf70e2c0d3cf2a131bc5849d87af00e0cd1c0631eac98f05c03
   languageName: node
   linkType: hard
 
