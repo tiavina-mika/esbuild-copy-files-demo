@@ -29,14 +29,14 @@
   "repository": "https://github.com/tiavina-mika/esbuild-copy-files.git",
   "scripts": {
     "start": "node src/index.ts",
-    "watch:server": "node ./build.watch.config.js",
+    "watch:server": "node ./config/esbuild/build.watch.config.js",
     "watch:restart-server": "nodemon --config nodemon.json",
     "dev": "npx concurrently \"yarn watch:server\" \"yarn watch:restart-server\"",
-    "build": "node ./build.config.js",
+    "build": "node ./config/esbuild/build.config.js",
     "upgrade": "yarn add esbuild-copy-files@latest"
   },
   "dependencies": {
-    "esbuild-copy-files": "^0.2.12"
+    "esbuild-copy-files": "^0.2.14"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
