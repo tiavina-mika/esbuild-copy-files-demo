@@ -1,8 +1,8 @@
 const esbuild = require('esbuild');
-const { buildOptions } = require('./build.config');
+const { watchBuildOptions } = require('./build.config');
 
 async function watch() {
-  const ctx = await esbuild.context(buildOptions);
+  const ctx = await esbuild.context(watchBuildOptions);
 
   ctx.watch();
   console.log('[main] esbuild watching for changes...');
