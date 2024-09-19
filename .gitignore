@@ -58,3 +58,4 @@ jspm_packages/
 .yarn/build-state.yml
 .yarn
 .pnp.*
+dist
